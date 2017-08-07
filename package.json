@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "awesomeparser": "./index.js"
-  },
+    "awesomescrapper": "./index.js"
+  },  
   "dependencies": {
     "axios": "^0.16.2",
     "cheerio": "^1.0.0-rc.2",

@@ -11,7 +11,7 @@ Commander.arguments('<dir>')
 
     Parser.json().then((json) => {
       FS.writeFile(resolved, JSON.stringify(json), (err) => {
-        console.log(err ? err : `File saved in `);
+        console.log(err ? err : `File saved in ${resolved}`);
       })
     })
     .catch(console.log);
