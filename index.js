@@ -7,7 +7,7 @@ const Parser    = require('./parser');
 
 Commander.arguments('<dir>')
   .action((dir) => {
-    let resolved = Path.resolve(dir, 'fontawesome-icons.json');
+    let resolved = Path.join(dir, 'fontawesome-icons.json');
 
     Parser.json().then((json) => {
       FS.writeFile(resolved, JSON.stringify(json), (err) => {
