@@ -1,0 +1,29 @@
+{
+  "name": "awesomescrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "awesomeparser": "./index.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasLeandro1204/Fontawesome-scrapper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasLeandro1204/Fontawesome-scrapper/issues"
+  },
+  "homepage": "https://github.com/LucasLeandro1204/Fontawesome-scrapper#readme"
+}
