@@ -1,5 +1,5 @@
 {
-  "name": "Awesome scrapper",
+  "name": "awesomescrapper",
   "version": "1.0.0",
   "description": "Simple way to get a JSON archive with all font-awesome icons.",
   "main": "index.js",
