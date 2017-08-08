@@ -5,9 +5,9 @@ const FS        = require('fs');
 const Path      = require('path');
 const Parser    = require('./parser');
 
-Commander.arguments('<dir>')
-  .action((dir) => {
-    let resolved = Path.join(dir, 'fontawesome-icons.json');
+Commander.arguments('<dir> [filename]')
+  .action((dir, filename = 'fontawesome-icons') => {
+    let resolved = Path.join(dir, `${filename}.json`);
 
     Parser.json().then((json) => {
       FS.writeFile(resolved, JSON.stringify(json), (err) => {
