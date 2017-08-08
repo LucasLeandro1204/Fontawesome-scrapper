@@ -1,5 +1,5 @@
 # Fontawesome-scrapper
-Simple way to get a JSON archive with all fontawesome icons.
+Simple way to get a JSON archive with all font-awesome icons.
 
 ## Installation
 ```bash

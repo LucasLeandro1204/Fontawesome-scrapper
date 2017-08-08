@@ -1,7 +1,7 @@
 {
-  "name": "awesomescrapper",
+  "name": "Awesome scrapper",
   "version": "1.0.0",
-  "description": "Simple way to get a JSON archive with all fontawesome icons.",
+  "description": "Simple way to get a JSON archive with all font-awesome icons.",
   "main": "index.js",
   "bin": {
     "awesomescrapper": "./index.js"
