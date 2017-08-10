@@ -23,19 +23,20 @@ class Parser {
 
   icons () {
     const $ = Cheerio.load(this.body);
+    let obj = {};
 
-    return $('#icons section:not(#new)').map((i, section) => {
+    $('#icons section:not(#new)').each((i, section) => {
       section = $(section);
 
       let category = section.attr('id');
       let icons = section.find('i');
 
-      return {
-        [category]: icons.map((i, icon) => {
-          return $(icon).attr('class');
-        }).get(),
-      }
-    }).get();
+      obj[category] = icons.map((i, icon) => {
+        return $(icon).attr('class');
+      }).get();
+    });
+
+    return obj;
   }
 
   _fetch () {
