@@ -5,7 +5,6 @@ const Cheerio = require('cheerio');
 
 class Parser {
   constructor () {
-    this.body = {};
     this.url = 'http://fontawesome.io/icons';
   }
 
@@ -14,13 +13,13 @@ class Parser {
 
     return new Promise((resolve, reject) => {
       self._fetch()
-        .then(() => resolve(self.icons()))
+        .then(body => resolve(self.icons(body)))
         .catch(err => reject(err));
     });
   }
 
-  icons () {
-    const $ = Cheerio.load(this.body);
+  icons (body) {
+    const $ = Cheerio.load(body);
     let obj = {};
 
     $('#icons section:not(#new)').each((i, section) => {
@@ -36,7 +35,7 @@ class Parser {
   }
 
   _fetch () {
-    return Axios.get(this.url).then(({ data: body }) => this.body = body);
+    return Axios.get(this.url).then(({ data: body }) => body);
   }
 }
 
