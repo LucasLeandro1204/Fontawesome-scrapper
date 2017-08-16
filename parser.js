@@ -15,9 +15,7 @@ class Parser {
     return new Promise((resolve, reject) => {
       self._fetch()
         .then(() => resolve(self.icons()))
-        .catch((err) => {
-          reject(err);
-        });
+        .catch(err => reject(err));
     });
   }
 
@@ -31,9 +29,7 @@ class Parser {
       let category = section.attr('id');
       let icons = section.find('i');
 
-      obj[category] = icons.map((i, icon) => {
-        return $(icon).attr('class');
-      }).get();
+      obj[category] = icons.map((i, icon) => $(icon).attr('class')).get();
     });
 
     return obj;
